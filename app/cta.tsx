@@ -1,14 +1,8 @@
 "use client";
 import { Button } from "@/components/ui/layout/button";
-import { Leckerli_One, Saira } from "next/font/google";
 import Image from "next/image";
-
-const leckerli = Leckerli_One({ subsets: ["latin"], weight: ["400"] });
-
-const saira = Saira({
-  subsets: ["latin"],
-  weight: ["100", "300", "500", "600", "700", "400"],
-});
+import leckerli from "./fonts/leckerli";
+import saira from "./fonts/saira";
 
 // const poiret = Poiret_One({
 //   subsets: ["latin"],
@@ -17,43 +11,52 @@ const saira = Saira({
 
 export default function Cta() {
   return (
-    <article className="pb-24 w-full flex max-w-[1280px]">
-      <div className="flex flex-col h-full justify-center gap-1">
-        <span className={`text-4xl ${saira.className} font-light`}>
+    <article className="pb-6 w-full flex max-w-screen-xl gap-4">
+      <div className="flex flex-col h-full justify-center gap-1 w-full md:w-6/12 lg:w-7/12">
+        <span
+          className={`text-3xl md:text-2xl lg:text-4xl ${saira.className} font-light`}
+        >
           Os melhores
         </span>
-        <span className={`text-7xl font-bold ${leckerli.className}`}>
+        <span
+          className={`text-6xl md:text-5xl lg:text-7xl font-bold ${leckerli.className}`}
+        >
           Bolos de Aniversário
         </span>
-        <span className={`text-4xl ${saira.className} font-light`}>
+        <span
+          className={`text-3xl md:text-2xl lg:text-4xl ${saira.className} font-light`}
+        >
           Cupcakes, Tartes, Semifrios, e muito mais...
         </span>
         <Button
-          className={`text-xl w-min ${saira.className} h-auto p-2 px-4 font-light mt-6`}
+          className={`text-xl md:text-lg lg:text-xl w-min ${saira.className} h-auto p-2 px-4 font-light mt-6`}
         >
           PEDIR ORÇAMENTO
         </Button>
       </div>
-      <div className="ml-auto h-full flex flex-col justify-center relative">
-        <div className="aspect-[1096/1103] h-[30rem] relative">
-          <div className="aspect-[7108/7524] h-[27rem] absolute top-[1.45rem] right-[2.65rem]">
+      <div className="hidden ml-auto h-full md:flex flex-col justify-center items-end relative md:w-6/12 lg:w-5/12">
+        <div className="aspect-[1096/1103] w-[93.5%] relative">
+          <div className="aspect-[7108/7524] h-[91.5%] m-auto left-0 right-[3.5%] top-0 bottom-0 absolute">
             <Image src="/cake.png" alt="delicious cake" fill />
           </div>
-          <div className="aspect-[1096/1103] h-[30rem] absolute top-0 right-0">
+          <div className="aspect-[1096/1103] w-full absolute top-0 right-0">
             <Image
-              className="pointer-events-none"
+              className="pointer-events-none select-none"
               src="/cake-border.svg"
               alt="design detail"
               fill
             />
           </div>
-          <Image
+          <div className="aspect-[315/384] absolute bottom-0 left-[-15%] w-[18.5%] -z-10">
+            <Image src="/gift.svg" alt="design detail" fill />
+          </div>
+          {/* <Image
             src="/gift.svg"
             alt="design detail"
             width={315 / 2.75}
             height={384 / 2.75}
-            className="pointer-events-none absolute bottom-0 left-[-6.25rem]"
-          />
+            className="pointer-events-none select-none absolute bottom-0 left-[-6.25rem]"
+          /> */}
         </div>
       </div>
     </article>

@@ -1,18 +1,15 @@
-import { Lobster, Saira } from "next/font/google";
+import saira from "@/app/fonts/saira";
+import { Lobster } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
 const lobster = Lobster({ subsets: ["latin"], weight: ["400"] });
-const saira = Saira({
-  subsets: ["latin"],
-  weight: ["100", "300", "500", "600", "700", "400"],
-});
 
 export default function Header({ activeTab }: { activeTab: string }) {
   return (
     <header className="h-24 flex justify-center px-12">
-      <div className="flex w-full items-center max-w-[1280px]">
+      <div className="flex w-full items-center max-w-screen-xl">
         <div
           className={`h-12 bg-white rounded-3xl flex items-center p-2 text-lg justify-center ${lobster.className}`}
         >
@@ -31,10 +28,10 @@ export default function Header({ activeTab }: { activeTab: string }) {
           {tabs.map((x, i) => (
             <Link
               key={i}
-              href="#"
+              href={x.link}
               className={twMerge(
                 "h-9 rounded-3xl flex justify-center items-center px-5 py-2 text-theme-orange font-semibold",
-                x.id === (activeTab || "/")
+                x.link === (activeTab || "/")
                   ? "bg-theme-grey5 text-white"
                   : "hover:bg-gray-200"
               )}
@@ -50,19 +47,19 @@ export default function Header({ activeTab }: { activeTab: string }) {
 
 const tabs = [
   {
-    id: "/",
+    link: "/",
     text: "Início",
   },
   {
-    id: "/prices",
+    link: "/prices",
     text: "Preço",
   },
   {
-    id: "/about-us",
+    link: "/about-us",
     text: "Sobre Nós",
   },
   {
-    id: "/contact",
-    text: "Contacto",
+    link: "/contact",
+    text: "Contato",
   },
 ];
