@@ -33,7 +33,7 @@ export default function Home({
       <section
         style={{
           background: !clean ? "url(/backgrounds/bg2.jpg)" : "",
-          backgroundSize: "cover",
+          backgroundSize: "135%",
           backgroundPosition: "center",
         }}
         id="gallery"
