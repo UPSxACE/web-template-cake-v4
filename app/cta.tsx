@@ -19,7 +19,7 @@ export default function Cta() {
           Os melhores
         </span>
         <span
-          className={`text-6xl md:text-5xl lg:text-7xl font-bold ${leckerli.className}`}
+          className={`text-6xl md:text-5xl lg:text-7xl font-bold ${leckerli.className} text-theme-grey5`}
         >
           Bolos de Aniversário
         </span>
@@ -37,7 +37,7 @@ export default function Cta() {
       <div className="hidden ml-auto h-full md:flex flex-col justify-center items-end relative md:w-6/12 lg:w-5/12">
         <div className="aspect-[1096/1103] w-[93.5%] relative">
           <div className="aspect-[7108/7524] h-[91.5%] m-auto left-0 right-[3.5%] top-0 bottom-0 absolute">
-            <Image src="/cake.png" alt="delicious cake" fill />
+            <Image src="/cake4.png" alt="delicious cake" fill />
           </div>
           <div className="aspect-[1096/1103] w-full absolute top-0 right-0">
             <Image

@@ -13,6 +13,7 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         theme: {
+          brown: "#381c0f",
           orange: "#df543d",
           pink0: "#f1e3e0",
           pink1: "#f2e6e5",

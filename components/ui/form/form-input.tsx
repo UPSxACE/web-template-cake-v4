@@ -5,9 +5,10 @@ import { twMerge } from "tailwind-merge";
 
 const FormInput = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, ...props }, ref) => {
+    // border-[#7c7c7c]
     return (
       <Input
-        className={twMerge("border-[#7c7c7c]", className)}
+        className={twMerge("border-theme-brown", className)}
         ref={ref}
         {...props}
       />
@@ -18,3 +19,4 @@ const FormInput = React.forwardRef<HTMLInputElement, InputProps>(
 FormInput.displayName = "FormInput";
 
 export { FormInput };
+

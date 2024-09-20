@@ -8,7 +8,7 @@ const FormButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, ...props }, ref) => {
     return (
       <Button
-        className={twMerge("w-full rounded-3xl", className)}
+        className={twMerge("w-full rounded-3xl bg-theme-brown", className)}
         ref={ref}
         {...props}
       />

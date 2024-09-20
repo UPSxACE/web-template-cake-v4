@@ -7,7 +7,7 @@ const FormTextarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className, ...props }, ref) => {
     return (
       <Textarea
-        className={twMerge("border-[#7c7c7c]", className)}
+        className={twMerge("border-theme-brown", className)}
         ref={ref}
         {...props}
       />

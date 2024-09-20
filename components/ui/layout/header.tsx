@@ -11,7 +11,7 @@ export default function Header({ activeTab }: { activeTab: string }) {
     <header className="h-24 flex justify-center px-12">
       <div className="flex w-full items-center max-w-screen-xl">
         <div
-          className={`h-12 bg-white rounded-3xl flex items-center p-2 text-lg justify-center ${lobster.className}`}
+          className={`h-12 bg-white rounded-3xl flex items-center p-2 text-lg justify-center text-theme-grey5 ${lobster.className}`}
         >
           <Image
             src="/logo.svg"
@@ -30,7 +30,7 @@ export default function Header({ activeTab }: { activeTab: string }) {
               key={i}
               href={x.link}
               className={twMerge(
-                "h-9 rounded-3xl flex justify-center items-center px-5 py-2 text-theme-orange font-semibold",
+                "h-9 rounded-3xl flex justify-center items-center px-5 py-2 text-theme-brown font-semibold",
                 x.link === (activeTab || "/")
                   ? "bg-theme-grey5 text-white"
                   : "hover:bg-gray-200"
@@ -51,8 +51,8 @@ const tabs = [
     text: "Início",
   },
   {
-    link: "/prices",
-    text: "Preço",
+    link: "/gallery",
+    text: "Galeria",
   },
   {
     link: "/about-us",
@@ -60,6 +60,6 @@ const tabs = [
   },
   {
     link: "/contact",
-    text: "Contato",
+    text: "Contacto",
   },
 ];
