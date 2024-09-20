@@ -1,14 +1,8 @@
 import Seal from "@/components/svg/seal";
-import {
-  LuCakeSlice,
-  LuCandyCane,
-  LuCastle,
-  LuCheckCircle,
-} from "react-icons/lu";
+import { LuCakeSlice, LuCandyCane, LuCastle, LuCheck } from "react-icons/lu";
 import { MdOutlineBakeryDining } from "react-icons/md";
 import leckerli from "./fonts/leckerli";
 import saira from "./fonts/saira";
-import { LuCheck } from "react-icons/lu";
 
 const specialties_ = [
   {
@@ -42,8 +36,8 @@ export default function Specialties() {
     <div
       className={`w-full flex justify-center items-center max-w-screen-xl gap-32 ${saira.className}`}
     >
-      {specialties_.slice(0, 4).map((x) => (
-        <article className="flex flex-col items-center z-10">
+      {specialties_.slice(0, 4).map((x, i) => (
+        <article key={i} className="flex flex-col items-center z-10">
           <div className="h-32 w-32 relative">
             <Seal
               classNames={{
@@ -76,10 +70,10 @@ export default function Specialties() {
         criações!
       </p> */}
       <div className="flex justify-center mt-3 grid-cols-3 gap-6 flex-wrap">
-        {specialties.map((x) => {
+        {specialties.map((x,i) => {
           // basis-[calc((100%_/_3)_-_(3rem_/_2))]
           return (
-            <article className="border border-solid w-96 border-neutral-300 p-8 flex flex-col gap-2">
+            <article key={i} className="border border-solid w-96 border-neutral-300 p-8 flex flex-col gap-2">
               <h1 className="text-xl font-medium">{x.title}</h1>
               <p>{x.description}</p>
             </article>

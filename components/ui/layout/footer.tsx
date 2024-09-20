@@ -1,7 +1,6 @@
 import leckerli from "@/app/fonts/leckerli";
 import saira from "@/app/fonts/saira";
 import { Button } from "@/components/sui/button";
-import { Lobster } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -11,7 +10,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
-const lobster = Lobster({ subsets: ["latin"], weight: ["400"] });
+// const lobster = Lobster({ subsets: ["latin"], weight: ["400"] }); //REVIEW
 
 export default function Footer() {
   // FIXME fix z-index, clickable links!
