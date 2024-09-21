@@ -1,14 +1,12 @@
+import lobster from "@/app/fonts/lobster";
 import saira from "@/app/fonts/saira";
-import { Lobster } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
-const lobster = Lobster({ subsets: ["latin"], weight: ["400"] });
-
 export default function Header({ activeTab }: { activeTab: string }) {
   return (
-    <header className="h-24 flex justify-center px-12">
+    <header className="h-20 flex justify-center px-12 bg-white !bg-transparent z-10">
       <div className="flex w-full items-center max-w-screen-xl">
         <div
           className={`h-12 bg-white rounded-3xl flex items-center p-2 text-lg justify-center text-theme-grey5 ${lobster.className}`}

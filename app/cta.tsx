@@ -35,29 +35,34 @@ export default function Cta() {
         </Button>
       </div>
       <div className="hidden ml-auto h-full md:flex flex-col justify-center items-end relative md:w-6/12 lg:w-5/12">
-        <div className="aspect-[1096/1103] w-[93.5%] relative">
-          <div className="aspect-[7108/7524] h-[91.5%] m-auto left-0 right-[3.5%] top-0 bottom-0 absolute">
-            <Image src="/cake4.png" alt="delicious cake" fill />
-          </div>
-          <div className="aspect-[1096/1103] w-full absolute top-0 right-0">
+        {/* <div className="aspect-[1096/1103] w-[93.5%] relative"> */}
+        <div className="aspect-[2508/2625] relative w-full">
+          <Image
+            className="p-[8%]"
+            src="/cake13.png"
+            alt="delicious cake"
+            fill
+          />
+        </div>
+        {/* <div className="aspect-[1096/1103] w-full absolute top-0 right-0">
             <Image
               className="pointer-events-none select-none"
               src="/cake-border.svg"
               alt="design detail"
               fill
             />
-          </div>
-          <div className="aspect-[315/384] absolute bottom-0 left-[-15%] w-[18.5%] -z-10">
+          </div> */}
+        {/* <div className="aspect-[315/384] absolute bottom-0 left-[-15%] w-[18.5%] -z-10">
             <Image src="/gift.svg" alt="design detail" fill />
-          </div>
-          {/* <Image
+          </div> */}
+        {/* <Image
             src="/gift.svg"
             alt="design detail"
             width={315 / 2.75}
             height={384 / 2.75}
             className="pointer-events-none select-none absolute bottom-0 left-[-6.25rem]"
           /> */}
-        </div>
+        {/* </div> */}
       </div>
     </article>
   );

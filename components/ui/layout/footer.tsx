@@ -69,7 +69,10 @@ export default function Footer() {
                 variant="outline"
                 className="text-2xl rounded-full p-0 w-[36px] h-[36px] !bg-transparent !text-white border-2 border-solid border-theme-grey-5 transition-all duration-200"
               >
-                <Link href="https://facebook.com/vyzion.pt" target="_blank">
+                <Link
+                  href="https://www.facebook.com/feitocomamor242024"
+                  target="_blank"
+                >
                   <FaFacebookF />
                 </Link>
               </Button>
@@ -78,7 +81,10 @@ export default function Footer() {
                 variant="outline"
                 className="text-2xl rounded-full p-0 w-[36px] h-[36px] !bg-transparent !text-white border-2 border-solid border-theme-grey-5 transition-all duration-200"
               >
-                <Link href="https://facebook.com/vyzion.pt" target="_blank">
+                <Link
+                  href="https://www.instagram.com/feitocomamor242024"
+                  target="_blank"
+                >
                   <FaInstagram />
                 </Link>
               </Button>
@@ -87,7 +93,7 @@ export default function Footer() {
                 variant="outline"
                 className="text-2xl rounded-full p-0 w-[36px] h-[36px] !bg-transparent !text-white border-2 border-solid border-theme-grey-5 transition-all duration-200"
               >
-                <Link href="https://facebook.com/vyzion.pt" target="_blank">
+                <Link href="https://wa.me/+351918681933" target="_blank">
                   <FaWhatsapp />
                 </Link>
               </Button>

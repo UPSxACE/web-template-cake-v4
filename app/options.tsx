@@ -8,19 +8,19 @@ import {
 import Link from "next/link";
 import leckerli from "./fonts/leckerli";
 import saira from "./fonts/saira";
+import lobster from "./fonts/lobster";
 export default function Options() {
   return (
     <div
       className={`py-16 pb-24 w-full flex flex-col justify-center max-w-screen-xl gap-8 ${saira.className}`}
     >
       <h1
-        className={`text-5xl text-[#381C0F] text-center font-semibold ${leckerli.className}`}
+        className={`text-6xl text-[#381C0F] text-center font-semibold ${lobster.className}`}
       >
-        Infinitas Opções
+        Preços
       </h1>
       <p className="text-center text-lg">
-        Feitos com amor a pensar em si, não vai conseguir resistir às nossas
-        criações!
+        Aqui está uma amostra dos nossos trabalhos e respetivos preços.
       </p>
       <div className="flex justify-center mt-3">
         <Carousel className="w-full max-w-5xl">

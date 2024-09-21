@@ -19,9 +19,9 @@ import ContactForm from "./contact-form";
 export default function ContactPage() {
   return (
     <main
-      className={`min-h-[110svh] bg-[#ecddd8] -z-20 relative flex flex-col text-theme-grey-5 ${saira.className} text-theme-brown`}
+      className={`min-h-[calc(100svh_+_1rem)] bg-full -z-20 relative flex flex-col text-theme-grey-5 ${saira.className} text-theme-brown`}
     >
-      <div className="min-h-[110svh] pb-[10svh] flex flex-col relative">
+      <div className="min-h-[calc(100svh_+_1rem)] pb-4 flex flex-col relative">
         <Shapes />
         <Header activeTab="/contact" />
         <div className="flex justify-center px-8 md:px-12 flex-1 items-center">
@@ -52,7 +52,10 @@ export default function ContactPage() {
                     variant="outline"
                     className="text-2xl rounded-full p-0 w-[44px] h-[44px] !bg-transparent !text-theme-brown border-2 border-solid border-theme-grey-5 transition-all duration-200"
                   >
-                    <Link href="https://facebook.com/vyzion.pt" target="_blank">
+                    <Link
+                      href="https://www.facebook.com/feitocomamor242024"
+                      target="_blank"
+                    >
                       <FaFacebookF />
                     </Link>
                   </Button>
@@ -61,7 +64,10 @@ export default function ContactPage() {
                     variant="outline"
                     className="text-2xl rounded-full p-0 w-[44px] h-[44px] !bg-transparent !text-theme-brown border-2 border-solid border-theme-grey-5 transition-all duration-200"
                   >
-                    <Link href="https://facebook.com/vyzion.pt" target="_blank">
+                    <Link
+                      href="https://www.instagram.com/feitocomamor242024"
+                      target="_blank"
+                    >
                       <FaInstagram />
                     </Link>
                   </Button>
@@ -70,7 +76,7 @@ export default function ContactPage() {
                     variant="outline"
                     className="text-2xl rounded-full p-0 w-[44px] h-[44px] !bg-transparent !text-theme-brown border-2 border-solid border-theme-grey-5 transition-all duration-200"
                   >
-                    <Link href="https://facebook.com/vyzion.pt" target="_blank">
+                    <Link href="https://wa.me/+351918681933" target="_blank">
                       <FaWhatsapp />
                     </Link>
                   </Button>

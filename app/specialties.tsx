@@ -70,10 +70,13 @@ export default function Specialties() {
         criações!
       </p> */}
       <div className="flex justify-center mt-3 grid-cols-3 gap-6 flex-wrap">
-        {specialties.map((x,i) => {
+        {specialties.map((x, i) => {
           // basis-[calc((100%_/_3)_-_(3rem_/_2))]
           return (
-            <article key={i} className="border border-solid w-96 border-neutral-300 p-8 flex flex-col gap-2">
+            <article
+              key={i}
+              className="border border-solid w-96 border-neutral-300 p-8 flex flex-col gap-2"
+            >
               <h1 className="text-xl font-medium">{x.title}</h1>
               <p>{x.description}</p>
             </article>
