@@ -30,7 +30,7 @@ export default function Gallery() {
                       backgroundImage: `url(${x.imageSrc})`,
                       backgroundSize: "cover",
                     }}
-                    className="w-full aspect-square bg-red-50 rounded-none"
+                    className="w-full aspect-square bg-gray-300 rounded-none"
                   ></Link>
                 </article>
               </div>
