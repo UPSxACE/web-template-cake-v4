@@ -19,64 +19,68 @@ export default function Options() {
   const state = useCarouselState();
 
   return (
-    <div
-      className={`py-16 pb-24 w-full flex flex-col justify-center max-w-screen-xl gap-8 ${saira.className}`}
-    >
-      <h1
-        className={`text-6xl max-sm:text-4xl text-[#381C0F] text-center font-semibold ${lobster.className}`}
-      >
-        Preços
-      </h1>
-      <p className="text-center text-lg max-sm:text-base">
-        Aqui está uma amostra dos nossos trabalhos e respetivos preços.
-      </p>
-      <div className="flex justify-center mt-3">
-        <Carousel
-          plugins={[
-            Autoplay({
-              delay: 5000,
-              stopOnInteraction: false,
-              stopOnMouseEnter: true,
-            }),
-          ]}
-          setApi={state.setApi}
-          className="w-full max-w-[calc(100%_-_2rem)] sm:max-w-[calc(100%_-_8rem)] xl:max-w-5xl"
-          opts={{ align: "start" }}
+    <section id="options" className="bg-white">
+      <div className="flex justify-center px-8 sm:px-12 flex-1">
+        <div
+          className={`py-16 pb-24 w-full flex flex-col justify-center max-w-screen-xl gap-8 ${saira.className}`}
         >
-          <CarouselContent className="flex gap-6">
-            {data.map((x, index) => (
-              <CarouselItem
-                key={index}
-                className="basis-full sm:basis-[calc(50%-0.75rem)] lg:basis-[calc(33.333333%-1rem)]"
-              >
-                <article className="flex flex-col w-full px-4 gap-1">
-                  <Link
-                    href="/contact"
-                    style={{
-                      backgroundImage: `url(${x.imageSrc})`,
-                      backgroundSize: "cover",
-                    }}
-                    className="w-full aspect-square bg-gray-300 rounded-3xl"
-                  ></Link>
-                  <Link
-                    href="/contact"
-                    className={`text-center text-xl font-medium ${leckerli.className} mt-2`}
+          <h1
+            className={`text-6xl max-sm:text-4xl text-[#381C0F] text-center font-semibold ${lobster.className}`}
+          >
+            Preços
+          </h1>
+          <p className="text-center text-lg max-sm:text-base">
+            Aqui está uma amostra dos nossos trabalhos e respetivos preços.
+          </p>
+          <div className="flex justify-center mt-3">
+            <Carousel
+              plugins={[
+                Autoplay({
+                  delay: 5000,
+                  stopOnInteraction: false,
+                  stopOnMouseEnter: true,
+                }),
+              ]}
+              setApi={state.setApi}
+              className="w-full max-w-[calc(100%_-_2rem)] sm:max-w-[calc(100%_-_8rem)] xl:max-w-5xl"
+              opts={{ align: "start" }}
+            >
+              <CarouselContent className="flex gap-6">
+                {data.map((x, index) => (
+                  <CarouselItem
+                    key={index}
+                    className="basis-full sm:basis-[calc(50%-0.75rem)] lg:basis-[calc(33.333333%-1rem)]"
                   >
-                    {x.title}
-                  </Link>
-                  <span className="text-center text-gray-600">
-                    €{formatEuro(x.price)}
-                  </span>
-                  <p className="text-center mt-1">{x.description}</p>
-                </article>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="text-[#381c0f]" state={state} />
-          <CarouselNext className="text-[#381c0f]" state={state} />
-        </Carousel>
+                    <article className="flex flex-col w-full px-4 gap-1">
+                      <Link
+                        href="/contact"
+                        style={{
+                          backgroundImage: `url(${x.imageSrc})`,
+                          backgroundSize: "cover",
+                        }}
+                        className="w-full aspect-square bg-gray-300 rounded-3xl"
+                      ></Link>
+                      <Link
+                        href="/contact"
+                        className={`text-center text-xl font-medium ${leckerli.className} mt-2`}
+                      >
+                        {x.title}
+                      </Link>
+                      <span className="text-center text-gray-600">
+                        €{formatEuro(x.price)}
+                      </span>
+                      <p className="text-center mt-1">{x.description}</p>
+                    </article>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-[#381c0f]" state={state} />
+              <CarouselNext className="text-[#381c0f]" state={state} />
+            </Carousel>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
