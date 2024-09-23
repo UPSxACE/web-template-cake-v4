@@ -40,7 +40,7 @@ export default function Gallery() {
                         }}
                         className="w-full aspect-square bg-gray-300 rounded-none relative"
                       >
-                        <div className="absolute opacity-0 hover:opacity-80 bg-[#262321] w-full h-full transition-all duration-300 text-white flex justify-center items-center text-lg">
+                        <div className="absolute opacity-0 hover:opacity-80 bg-[#262321] w-full h-full transition-all duration-300 text-white flex justify-center items-center text-lg select-none">
                           Encomende Já
                         </div>
                       </Link>
