@@ -3,6 +3,7 @@
 import LoadingSpinner from "@/components/ui/loading-spinner";
 import { useInView } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 export default function Pictures() {
@@ -29,6 +30,12 @@ export default function Pictures() {
             fill
             alt="bolo feito com amor"
           />
+          <Link
+            href="/contact"
+            className="absolute opacity-0 hover:opacity-80 bg-[#262321] w-full h-full transition-all duration-300 text-white flex justify-center items-center text-lg"
+          >
+            Encomende Já
+          </Link>
         </div>
       ))}
       {hasNextPage && (

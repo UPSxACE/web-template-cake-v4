@@ -38,8 +38,12 @@ export default function Gallery() {
                           backgroundImage: `url(${x.imageSrc})`,
                           backgroundSize: "cover",
                         }}
-                        className="w-full aspect-square bg-gray-300 rounded-none"
-                      ></Link>
+                        className="w-full aspect-square bg-gray-300 rounded-none relative"
+                      >
+                        <div className="absolute opacity-0 hover:opacity-80 bg-[#262321] w-full h-full transition-all duration-300 text-white flex justify-center items-center text-lg">
+                          Encomende Já
+                        </div>
+                      </Link>
                     </article>
                   </div>
                 ))}
