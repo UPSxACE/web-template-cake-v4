@@ -12,14 +12,10 @@ import {
 } from "@/components/sui/sheet";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { IoMenuSharp } from "react-icons/io5";
 import { twMerge } from "tailwind-merge";
 
 export default function Header({ activeTab }: { activeTab: string }) {
-  const [open, setOpen] = useState(false);
-  const openMenu = () => setOpen(true);
-
   return (
     <header className="h-20 flex justify-center px-8 sm:px-12 bg-white !bg-transparent z-10">
       <div className="flex w-full items-center max-w-screen-xl">
@@ -59,7 +55,6 @@ export default function Header({ activeTab }: { activeTab: string }) {
           <Sheet>
             <SheetTrigger asChild>
               <Button
-                onClick={openMenu}
                 variant="ghost"
                 className={`h-12 w-12 bg-white rounded-3xl ml-auto lg:hidden flex items-center p-2 ${saira.className} text-3xl`}
               >

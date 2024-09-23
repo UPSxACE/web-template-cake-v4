@@ -17,7 +17,7 @@ export default function useCarouselState() {
 
   useEffect(() => {
     refreshButtons();
-  }, [api]);
+  }, [api, refreshButtons]);
 
   const next = () => {
     api?.scrollNext();
@@ -37,7 +37,7 @@ export default function useCarouselState() {
     return () => {
       api.off("slidesInView", refreshButtons);
     };
-  }, [api]);
+  }, [api, refreshButtons]);
 
   return {
     api,
