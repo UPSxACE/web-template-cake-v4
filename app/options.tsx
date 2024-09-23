@@ -4,6 +4,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/sui/carousel";
+import { Button } from "@/components/ui/layout/button";
 import {
   CarouselNext,
   CarouselPrevious,
@@ -22,7 +23,7 @@ export default function Options() {
     <section id="options" className="bg-white">
       <div className="flex justify-center px-8 sm:px-12 flex-1">
         <div
-          className={`py-16 pb-24 w-full flex flex-col justify-center max-w-screen-xl gap-8 ${saira.className}`}
+          className={`py-16 pb-24 w-full flex flex-col justify-center items-center max-w-screen-xl gap-8 ${saira.className}`}
         >
           <h1
             className={`text-6xl max-sm:text-4xl text-[#381C0F] text-center font-semibold ${lobster.className}`}
@@ -78,6 +79,7 @@ export default function Options() {
               <CarouselNext className="text-[#381c0f]" state={state} />
             </Carousel>
           </div>
+      
         </div>
       </div>
     </section>

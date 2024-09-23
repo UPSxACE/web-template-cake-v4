@@ -3,6 +3,8 @@ import Header from "@/components/ui/layout/header";
 import Image from "next/image";
 import leckerli from "../fonts/leckerli";
 import saira from "../fonts/saira";
+import { Button } from "@/components/ui/layout/button";
+import Link from "next/link";
 
 export default function GalleryPage() {
   return (
@@ -31,6 +33,14 @@ export default function GalleryPage() {
               </div>
             ))}
           </div>
+          <Button asChild>
+            <Link
+              className={`text-base sm:text-xl md:text-lg lg:text-xl w-min ${saira.className} h-auto p-1 px-3 sm:p-2 sm:px-4 font-light mt-2 sm:mt-4`}
+              href="/contact"
+            >
+              PEDIR ORÇAMENTO
+            </Link>
+          </Button>
         </article>
       </div>
       <Footer />

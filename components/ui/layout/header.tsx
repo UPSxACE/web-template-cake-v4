@@ -109,8 +109,8 @@ const tabs = [
     text: "Galeria",
   },
   {
-    link: "https://www.facebook.com/feitocomamor242024",
-    text: "Sobre Nós",
+    link: "https://www.instagram.com/feitocomamor242024",
+    text: "Instagram",
     external: true,
   },
   {

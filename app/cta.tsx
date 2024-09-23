@@ -6,7 +6,7 @@ import Link from "next/link";
 import leckerli from "./fonts/leckerli";
 import saira from "./fonts/saira";
 
-const MotionButton = motion(Button);
+const MotionButton = motion.create(Button);
 
 export default function Cta() {
   return (
