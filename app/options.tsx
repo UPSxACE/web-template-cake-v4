@@ -40,7 +40,7 @@ export default function Options() {
             }),
           ]}
           setApi={state.setApi}
-          className="w-full max-w-[calc(100%_-_8rem)] xl:max-w-5xl"
+          className="w-full max-w-[calc(100%_-_2rem)] sm:max-w-[calc(100%_-_8rem)] xl:max-w-5xl"
           opts={{ align: "start" }}
         >
           <CarouselContent className="flex gap-6">
