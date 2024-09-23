@@ -4,7 +4,6 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/sui/carousel";
-import { Button } from "@/components/ui/layout/button";
 import {
   CarouselNext,
   CarouselPrevious,
