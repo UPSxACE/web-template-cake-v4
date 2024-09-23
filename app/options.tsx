@@ -105,41 +105,41 @@ const data = [
     title: "Bolo de Aniversário",
     price: 65,
     description:
-      "Massa de noz com recheio de limão e caramelo salgado.\nCobertura de butercream.",
+      "Massa de noz com recheio de limão e caramelo salgado.\nCobertura de buttercream.",
   },
   {
     imageSrc: "/cakes/cake2.jpeg",
     title: "Bolo de Aniversário",
     price: 55.1,
     description:
-      "Massa de noz com recheio de caramelo salgado e massa de Pão de ló com recheio de crocante de chocolate branco.\nCobertura de butercream",
+      "Massa de noz com recheio de caramelo salgado e massa de Pão de ló com recheio de crocante de chocolate branco.\nCobertura de buttercream",
   },
   {
     imageSrc: "/cakes/cake3.jpeg",
     title: "Bolo de Aniversário",
     price: 50.01,
     description:
-      "Massa de framboesa com recheio de frutos silvestres.\nCobertura de butercream.",
+      "Massa de framboesa com recheio de frutos silvestres.\nCobertura de buttercream.",
   },
   {
     imageSrc: "/cakes/cake4.jpeg",
     title: "Bolo de Aniversário",
     price: 45,
     description:
-      "Massa de cenoura com recheio de creme de avelã.\nCobertura de chantily.",
+      "Massa de cenoura com recheio de creme de avelã.\nCobertura de chantilly.",
   },
   {
     imageSrc: "/cakes/cake5.jpeg",
     title: "Bolo de Aniversário",
     price: 45,
     description:
-      "Massa de laranja com recheio de morango.\nCobertura de chantily.",
+      "Massa de laranja com recheio de morango.\nCobertura de chantilly.",
   },
   {
     imageSrc: "/cakes/cake6.jpeg",
     title: "Bolo de Aniversário",
     price: 50,
     description:
-      "Massa de chocolate com recheio de maracuja.\nCobertura de butercream.",
+      "Massa de chocolate com recheio de maracujá.\nCobertura de buttercream.",
   },
 ];
