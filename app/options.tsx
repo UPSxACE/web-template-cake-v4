@@ -1,34 +1,53 @@
+"use client";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
+} from "@/components/sui/carousel";
+import {
   CarouselNext,
   CarouselPrevious,
-} from "@/components/sui/carousel";
+} from "@/components/ui/layout/carousel-buttons";
+import useCarouselState from "@/components/ui/layout/use-carousel-state";
+import Autoplay from "embla-carousel-autoplay";
 import Link from "next/link";
 import leckerli from "./fonts/leckerli";
-import saira from "./fonts/saira";
 import lobster from "./fonts/lobster";
+import saira from "./fonts/saira";
+
 export default function Options() {
+  const state = useCarouselState();
+
   return (
     <div
       className={`py-16 pb-24 w-full flex flex-col justify-center max-w-screen-xl gap-8 ${saira.className}`}
     >
       <h1
-        className={`text-6xl text-[#381C0F] text-center font-semibold ${lobster.className}`}
+        className={`text-6xl max-sm:text-4xl text-[#381C0F] text-center font-semibold ${lobster.className}`}
       >
         Preços
       </h1>
-      <p className="text-center text-lg">
+      <p className="text-center text-lg max-sm:text-base">
         Aqui está uma amostra dos nossos trabalhos e respetivos preços.
       </p>
       <div className="flex justify-center mt-3">
-        <Carousel className="w-full max-w-5xl">
+        <Carousel
+          plugins={[
+            Autoplay({
+              delay: 5000,
+              stopOnInteraction: false,
+              stopOnMouseEnter: true,
+            }),
+          ]}
+          setApi={state.setApi}
+          className="w-full max-w-[calc(100%_-_8rem)] xl:max-w-5xl"
+          opts={{ align: "start" }}
+        >
           <CarouselContent className="flex gap-6">
             {data.map((x, index) => (
               <CarouselItem
                 key={index}
-                className="basis-[calc(33.333333%-1rem)]"
+                className="basis-full sm:basis-[calc(50%-0.75rem)] lg:basis-[calc(33.333333%-1rem)]"
               >
                 <article className="flex flex-col w-full px-4 gap-1">
                   <Link
@@ -53,8 +72,8 @@ export default function Options() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="text-[#381c0f]" state={state} />
+          <CarouselNext className="text-[#381c0f]" state={state} />
         </Carousel>
       </div>
     </div>

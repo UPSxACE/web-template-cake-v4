@@ -50,7 +50,7 @@ export default function ContactPage() {
                   <Button
                     asChild
                     variant="outline"
-                    className="text-2xl rounded-full p-0 w-[44px] h-[44px] !bg-transparent !text-theme-brown border-2 border-solid border-theme-grey-5 transition-all duration-200"
+                    className="text-2xl hover:text-[#c855a0] rounded-full p-0 w-[44px] h-[44px] !bg-transparent text-theme-brown border-2 border-solid border-theme-grey-5 transition-all duration-200"
                   >
                     <Link
                       href="https://www.facebook.com/feitocomamor242024"
@@ -62,7 +62,7 @@ export default function ContactPage() {
                   <Button
                     asChild
                     variant="outline"
-                    className="text-2xl rounded-full p-0 w-[44px] h-[44px] !bg-transparent !text-theme-brown border-2 border-solid border-theme-grey-5 transition-all duration-200"
+                    className="text-2xl hover:text-[#c855a0] rounded-full p-0 w-[44px] h-[44px] !bg-transparent text-theme-brown border-2 border-solid border-theme-grey-5 transition-all duration-200"
                   >
                     <Link
                       href="https://www.instagram.com/feitocomamor242024"
@@ -74,7 +74,7 @@ export default function ContactPage() {
                   <Button
                     asChild
                     variant="outline"
-                    className="text-2xl rounded-full p-0 w-[44px] h-[44px] !bg-transparent !text-theme-brown border-2 border-solid border-theme-grey-5 transition-all duration-200"
+                    className="text-2xl hover:text-[#c855a0] rounded-full p-0 w-[44px] h-[44px] !bg-transparent text-theme-brown border-2 border-solid border-theme-grey-5 transition-all duration-200"
                   >
                     <Link href="https://wa.me/+351918681933" target="_blank">
                       <FaWhatsapp />

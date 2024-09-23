@@ -20,10 +20,10 @@ export default function Home() {
         id="cta"
         className="z-10 relative flex-1 flex flex-col bg-white min-h-[calc(100svh_-_1rem)] pb-8 overflow-hidden"
       >
-        <Shapes />
+        <Shapes classNameBottom="-bottom-8" />
 
         <Header activeTab="/" />
-        <div className="flex justify-center px-12 flex-1">
+        <div className="flex justify-center px-8 sm:px-12 flex-1">
           <Cta />
         </div>
       </section>
@@ -36,11 +36,11 @@ export default function Home() {
           maskRepeat: "no-repeat",
           maskComposite: "intersect",
           background: "url(/backgrounds/bg12.jpg)",
-          backgroundSize: "100%",
+          backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="flex justify-center px-12 flex-1 h-96">
+        <div className="flex justify-center px-8 py-10 sm:px-12 lg:py-0 flex-1 h-96 max-md:h-auto">
           <Specialties />
         </div>
       </section>
@@ -49,7 +49,7 @@ export default function Home() {
         id="gallery"
         className="-mt-4 relative before:bg-white before:bg-opacity-80 before:absolute before:h-full before:w-full"
       >
-        <div className="flex justify-center px-12 flex-1 z-10 relative">
+        <div className="flex justify-center px-8 sm:px-12 flex-1 z-10 relative">
           <Gallery />
         </div>
       </section>
@@ -62,16 +62,16 @@ export default function Home() {
           maskRepeat: "no-repeat",
           maskComposite: "intersect",
           background: "url(/backgrounds/bg4.jpg)",
-          backgroundSize: "100%",
+          backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="flex justify-center px-12 flex-1 py-32">
+        <div className="flex justify-center px-8 sm:px-12 flex-1 py-32 max-sm:py-24">
           <More />
         </div>
       </section>
       <section id="options" className="bg-white">
-        <div className="flex justify-center px-12 flex-1">
+        <div className="flex justify-center px-8 sm:px-12 flex-1">
           <Options />
         </div>
       </section>

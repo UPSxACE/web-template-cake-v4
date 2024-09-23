@@ -17,23 +17,23 @@ export default function More() {
               border: "fill-white",
             }}
           /> */}
-        <TbBrandCakephp className="stroke-1 h-28 w-28 text-white" />
+        <TbBrandCakephp className="stroke-1 h-28 w-28 max-sm:h-20 max-sm:w-20 text-white" />
         {/* </div> */}
         <h1
-          className={`text-6xl text-white text-center font-semibold ${leckerli.className}`}
+          className={`text-6xl max-sm:text-5xl text-white text-center font-semibold ${leckerli.className}`}
         >
           Feito com Amor
         </h1>
-        <p className="text-base text-white text-center max-w-[48rem] mt-5">
+        <p className="text-base max-sm:text-sm text-white text-center max-w-[48rem] mt-5 max-sm:mt-4">
           As ideias partem de si, nós a tornamos realidade!
           <br />
-          Nossas criação são preparadas com todo o carinho e atenção ao
+          Nossas criações são preparadas com todo o carinho e atenção ao
           pormenor, garantindo sabor e beleza em cada criação. Desde receitas
           tradicionais a designs personalizados, tornamos as suas celebrações
           ainda mais especiais!
         </p>
         <Link
-          className="mt-5 text-xl text-white text-center font-medium hover:bg-white hover:text-black border border-solid border-white hover:border-theme-grey5 w-fit p-2 px-4 rounded-3xl ml-auto mr-auto"
+          className="mt-5 max-sm:mt-4 text-xl max-sm:text-base text-white text-center font-medium hover:bg-white hover:text-black border border-solid border-white hover:border-theme-grey5 w-fit p-2 px-4 rounded-3xl ml-auto mr-auto"
           href="/contact"
         >
           SABER MAIS

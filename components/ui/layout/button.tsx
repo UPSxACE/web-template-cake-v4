@@ -10,7 +10,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, ...props }, ref) => {
     return (
       <ButtonSDN
-        className={twMerge("bg-theme-grey5", className)}
+        className={twMerge(
+          "bg-[#342e2a] hover:bg-[#4a4a4a] duration-200",
+          className
+        )}
         ref={ref}
         {...props}
       />
@@ -20,3 +23,4 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button";
 
 export { Button, buttonVariants };
+

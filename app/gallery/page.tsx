@@ -11,13 +11,15 @@ export default function GalleryPage() {
     >
       <div className="min-h-[calc(100svh_+_1rem)] pb-4 flex flex-col relative">
         <Header activeTab="/gallery" />
-        <article className="py-4 pb-16 w-full flex flex-col items-center gap-4">
+        <article className="py-4 pb-16 w-full flex flex-col items-center gap-4 px-8 sm:px-12">
           <div className="w-full max-w-screen-xl">
-            <h1 className={`text-6xl text-center ${leckerli.className}`}>
+            <h1
+              className={`text-5xl sm:text-6xl text-center ${leckerli.className}`}
+            >
               As nossas criações
             </h1>
           </div>
-          <div className="w-full grid grid-cols-4 gap-4 max-w-screen-xl mt-4">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-screen-xl mt-4">
             {pictures.map((x, i) => (
               <div key={i} className="aspect-square w-full relative">
                 <Image src={x} className="" fill alt="bolo feito com amor" />

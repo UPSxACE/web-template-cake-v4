@@ -27,15 +27,15 @@ export default function Footer() {
         <div
           style={{
             background: "url(/footer-bg.jpg)",
-            backgroundSize: "100%",
+            backgroundSize: "cover",
             backgroundPosition: "center",
           }}
           className="absolute h-full w-full opacity-20 top-0 -z-10"
         />
-        <div className="max-w-screen-xl grid grid-cols-3 py-8">
+        <div className="max-w-screen-xl grid grid-cols-3 max-md:grid-cols-2 py-8 max-md:w-full max-md:gap-4">
           <Link
             href="/"
-            className="flex items-start  relative h-[200px] aspect-[452/338] mx-1"
+            className="flex items-start max-md:col-span-2 relative h-[200px] aspect-[452/338] mx-1 max-md:mx-auto"
           >
             <Image
               alt="feito com amor (logo)"
@@ -44,11 +44,13 @@ export default function Footer() {
               className="object-contain"
             />
           </Link>
-          <ul className="text-base text-center">
-            <li className={`text-3xl ${leckerli.className} mb-3`}>
+          <ul className="text-base text-center max-sm:col-span-2">
+            <li
+              className={`text-3xl max-md:text-2xl ${leckerli.className} mb-3`}
+            >
               <Link
                 href="/contact"
-                className="font-medium hover:text-[#757575] transition-colors duration-150"
+                className="font-medium hover:text-[#e39cca] transition-colors duration-150"
               >
                 Encomende já
               </Link>
@@ -61,13 +63,17 @@ export default function Footer() {
             <li>Bolachas</li>
             <li>e muito mais</li>
           </ul>
-          <ul className="text-base text-center space-y-2">
-            <li className={`text-3xl ${leckerli.className} mb-3`}>Contactos</li>
-            <li className="flex gap-4 justify-center">
+          <ul className="text-base text-center space-y-2 max-sm:col-span-2">
+            <li
+              className={`text-3xl max-md:text-2xl ${leckerli.className} mb-3`}
+            >
+              Contactos
+            </li>
+            <li className="flex gap-4 justify-center items-center">
               <Button
                 asChild
                 variant="outline"
-                className="text-2xl rounded-full p-0 w-[36px] h-[36px] !bg-transparent !text-white border-2 border-solid border-theme-grey-5 transition-all duration-200"
+                className="text-2xl rounded-full p-0 w-[36px] h-[36px] !bg-transparent text-white hover:text-[#e39cca] border-2 border-solid border-theme-grey-5 transition-all duration-200"
               >
                 <Link
                   href="https://www.facebook.com/feitocomamor242024"
@@ -79,7 +85,7 @@ export default function Footer() {
               <Button
                 asChild
                 variant="outline"
-                className="text-2xl rounded-full p-0 w-[36px] h-[36px] !bg-transparent !text-white border-2 border-solid border-theme-grey-5 transition-all duration-200"
+                className="text-2xl rounded-full p-0 w-[36px] h-[36px] !bg-transparent text-white hover:text-[#e39cca] border-2 border-solid border-theme-grey-5 transition-all duration-200"
               >
                 <Link
                   href="https://www.instagram.com/feitocomamor242024"
@@ -91,7 +97,7 @@ export default function Footer() {
               <Button
                 asChild
                 variant="outline"
-                className="text-2xl rounded-full p-0 w-[36px] h-[36px] !bg-transparent !text-white border-2 border-solid border-theme-grey-5 transition-all duration-200"
+                className="text-2xl rounded-full p-0 w-[36px] h-[36px] !bg-transparent text-white hover:text-[#e39cca] border-2 border-solid border-theme-grey-5 transition-all duration-200"
               >
                 <Link href="https://wa.me/+351918681933" target="_blank">
                   <FaWhatsapp />
@@ -102,7 +108,7 @@ export default function Footer() {
             <li>
               <Link
                 href="/contact"
-                className="hover:text-[#757575] transition-colors duration-150"
+                className="hover:text-[#e39cca] transition-colors duration-150"
               >
                 Formulário
               </Link>
@@ -113,10 +119,12 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="flex w-full justify-center h-12 bg-[#322b28] px-12 text-gray-300">
-        <div className="flex items-center w-full max-w-screen-xl">
-          <span>© Feito com Amor. Todos os direitos reservados.</span>
-          <span className="ml-auto flex items-center">
+      <div className="flex w-full justify-center h-12 bg-[#322b28] px-8 sm:px-12 text-gray-300 max-sm:h-24 max-md:h-16">
+        <div className="flex max-md:flex-col max-md:justify-center md:items-center w-full max-w-screen-xl max-md:gap-1">
+          <span className="text-center">
+            © Feito com Amor. Todos os direitos reservados.
+          </span>
+          <span className="md:ml-auto max-md:text-center max-md:justify-center flex items-center">
             Desenvolvido por{" "}
             <Link href="https://vyzion.pt" target="_blank" className="ml-1">
               Vyzion.pt

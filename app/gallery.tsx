@@ -7,11 +7,11 @@ export default function Gallery() {
       className={`py-20 w-full flex flex-col justify-center max-w-screen-xl gap-8 ${saira.className}`}
     >
       <h1
-        className={`text-6xl text-[#381C0F] text-center font-semibold ${lobster.className}`}
+        className={`text-6xl max-sm:text-4xl text-[#381C0F] text-center font-semibold ${lobster.className}`}
       >
         Infinitas Opções
       </h1>
-      <p className="text-center text-lg">
+      <p className="text-center text-lg max-sm:text-base">
         Feitos com amor a pensar em si, não vai conseguir resistir às nossas
         criações!
       </p>
@@ -19,7 +19,10 @@ export default function Gallery() {
         <div className="w-full max-w-6xl">
           <div className="flex gap-4 flex-wrap">
             {data.slice(0, 8).map((x, index) => (
-              <div key={index} className="basis-[calc(25%-0.75rem)]">
+              <div
+                key={index}
+                className="basis-full sm:basis-[calc(50%-0.50rem)] md:basis-[calc(25%-0.75rem)]"
+              >
                 <article className="flex flex-col w-full gap-1">
                   <Link
                     href="/contact"
