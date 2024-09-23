@@ -1,10 +1,10 @@
+import { Button } from "@/components/ui/layout/button";
 import Footer from "@/components/ui/layout/footer";
 import Header from "@/components/ui/layout/header";
-import Image from "next/image";
+import Link from "next/link";
 import leckerli from "../fonts/leckerli";
 import saira from "../fonts/saira";
-import { Button } from "@/components/ui/layout/button";
-import Link from "next/link";
+import Pictures from "./pictures";
 
 export default function GalleryPage() {
   return (
@@ -21,18 +21,7 @@ export default function GalleryPage() {
               As nossas criações
             </h1>
           </div>
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-screen-xl mt-4">
-            {pictures.map((x, i) => (
-              <div key={i} className="aspect-square w-full relative">
-                <Image
-                  src={x}
-                  className="bg-gray-300"
-                  fill
-                  alt="bolo feito com amor"
-                />
-              </div>
-            ))}
-          </div>
+          <Pictures />
           <Button asChild>
             <Link
               className={`text-base sm:text-xl md:text-lg lg:text-xl w-min ${saira.className} h-auto p-1 px-3 sm:p-2 sm:px-4 font-light mt-2 sm:mt-4`}
@@ -47,30 +36,3 @@ export default function GalleryPage() {
     </main>
   );
 }
-
-const pictures = [
-  "/gallery/1.jpg",
-  "/gallery/2.jpg",
-  "/gallery/3.jpg",
-  "/gallery/4.jpg",
-  "/gallery/5.jpg",
-  "/gallery/6.jpg",
-  "/gallery/7.jpg",
-  "/gallery/8.jpg",
-  "/gallery/Pic(1).jpg",
-  "/gallery/Pic(2).jpg",
-  "/gallery/Pic(3).jpg",
-  "/gallery/Pic(4).jpg",
-  "/gallery/Pic(5).jpg",
-  "/gallery/Pic(6).jpg",
-  "/gallery/Pic(7).jpg",
-  "/gallery/Pic(8).jpg",
-  "/gallery/Pic(9).jpg",
-  "/gallery/Pic(10).jpg",
-  "/gallery/Pic(11).jpg",
-  "/gallery/Pic(12).jpg",
-  "/gallery/Pic(13).jpg",
-  "/gallery/Pic(14).jpg",
-  "/gallery/Pic(15).jpg",
-  "/gallery/Pic(16).jpg",
-];

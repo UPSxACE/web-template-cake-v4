@@ -32,7 +32,7 @@ export default function Options() {
           <p className="text-center text-lg max-sm:text-base">
             Aqui está uma amostra dos nossos trabalhos e respetivos preços.
           </p>
-          <div className="flex justify-center mt-3">
+          <div className="flex justify-center mt-3 w-full">
             <Carousel
               plugins={[
                 Autoplay({
@@ -78,7 +78,6 @@ export default function Options() {
               <CarouselNext className="text-[#381c0f]" state={state} />
             </Carousel>
           </div>
-      
         </div>
       </div>
     </section>
