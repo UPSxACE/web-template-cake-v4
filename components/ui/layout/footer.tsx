@@ -23,7 +23,7 @@ export default function Footer() {
         maskRepeat: "no-repeat",
       }}
     >
-      <div className="flex w-full justify-center bg-[#497a93] text-white relative -z-10 pt-4">
+      <div className="flex w-full justify-center bg-[#0079b6] text-white relative -z-10 pt-4">
         <div
           style={{
             background: "url(/footer-bg.jpg)",
@@ -119,7 +119,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="flex w-full justify-center h-12 bg-[#0079b6] px-8 sm:px-12 text-gray-300 max-sm:h-24 max-md:h-16">
+      <div className="flex w-full justify-center h-12 bg-[#005992] px-8 sm:px-12 text-gray-300 max-sm:h-24 max-md:h-16">
         <div className="flex max-md:flex-col max-md:justify-center md:items-center w-full max-w-screen-xl max-md:gap-1">
           <span className="text-center">
             © Feito com Amor. Todos os direitos reservados.
