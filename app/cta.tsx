@@ -63,11 +63,11 @@ export default function Cta() {
             duration: 0.7 + 0.25 + 0.25 + 0.15,
             delay: 0.2 + 0.25 + 0.25 + 0.25 + 0.1,
           }}
-          className="aspect-[2508/2625] relative w-full"
+          className="aspect-[924/1202] relative w-[80%] mr-auto ml-auto"
         >
           <Image
             className="p-[8%]"
-            src="/cake13.png"
+            src="/cake14.png"
             alt="delicious cake"
             fill
           />

@@ -7,7 +7,7 @@ export default function More() {
   return (
     <section
       id="more"
-      className="-mt-4 relative before:bg-[#37312e] before:bg-opacity-80 before:absolute before:h-full before:w-full"
+      className="-mt-4 relative before:bg-[#929292] before:bg-opacity-80 before:absolute before:h-full before:w-full"
       style={{
         mask: "url(/waves-2-down.svg) bottom, url(/waves-2.svg) top",
         maskSize: "cover",

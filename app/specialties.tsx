@@ -28,7 +28,7 @@ export default function Specialties() {
   return (
     <section
       id="specialties"
-      className="-mt-4 relative before:bg-[#37312e] before:bg-opacity-[0.9] before:absolute before:h-full before:w-full z-10"
+      className="-mt-4 relative before:bg-[#929292] before:bg-opacity-[0.7] before:absolute before:h-full before:w-full z-10"
       style={{
         mask: "url(/waves-2-down.svg) bottom, url(/waves-2.svg) top",
         maskSize: "cover",
