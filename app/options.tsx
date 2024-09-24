@@ -25,7 +25,7 @@ export default function Options() {
           className={`py-16 pb-24 w-full flex flex-col justify-center items-center max-w-screen-xl gap-8 ${saira.className}`}
         >
           <h1
-            className={`text-6xl max-sm:text-4xl text-[#381C0F] text-center font-semibold ${lobster.className}`}
+            className={`text-6xl max-sm:text-4xl text-[#0079b6] text-center font-semibold ${lobster.className}`}
           >
             Preços
           </h1>
@@ -62,7 +62,7 @@ export default function Options() {
                       ></Link>
                       <Link
                         href="/contact"
-                        className={`text-center text-xl font-medium ${leckerli.className} mt-2`}
+                        className={`text-center text-xl font-medium ${leckerli.className} mt-2 text-[#0079b6]`}
                       >
                         {x.title}
                       </Link>

@@ -41,9 +41,9 @@ export default function Header({ activeTab }: { activeTab: string }) {
                 key={i}
                 href={x.link}
                 className={twMerge(
-                  "h-9 rounded-3xl flex justify-center items-center px-5 py-2 text-theme-brown font-semibold",
+                  "h-9 rounded-3xl flex justify-center items-center px-5 py-2 text-[#494949] font-semibold",
                   x.link === (activeTab || "/")
-                    ? "bg-[#342e2a] text-white"
+                    ? "bg-[#0079b6] text-white"
                     : "hover:bg-gray-200"
                 )}
                 target={x.external ? "_blank" : undefined}

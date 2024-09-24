@@ -10,7 +10,7 @@ const MotionButton = motion.create(Button);
 
 export default function Cta() {
   return (
-    <article className="pb-6 w-full flex max-w-screen-xl gap-4 text-[#342e2a]">
+    <article className="pb-6 w-full flex max-w-screen-xl gap-4 text-[#494949]">
       <div className="flex flex-col h-full justify-center gap-1 w-full md:w-6/12 lg:w-7/12">
         <motion.span
           initial={{ opacity: 0, translateX: "64px" }}
@@ -24,7 +24,7 @@ export default function Cta() {
           initial={{ opacity: 0, translateX: "64px" }}
           animate={{ opacity: 1, translateX: 0 }}
           transition={{ bounce: 0, duration: 0.5, delay: 0.2 + 0.25 }}
-          className={`text-[2.5rem] sm:text-6xl md:text-5xl lg:text-7xl font-bold ${leckerli.className} text-[#342e2a]`}
+          className={`text-[2.5rem] sm:text-6xl md:text-5xl lg:text-7xl font-bold ${leckerli.className} text-[#0079b6]`}
         >
           Bolos de Aniversário
         </motion.span>
@@ -47,7 +47,7 @@ export default function Cta() {
           asChild
         >
           <Link
-            className={`text-base sm:text-xl md:text-lg lg:text-xl w-min ${saira.className} h-auto p-1 px-3 sm:p-2 sm:px-4 font-light mt-2 sm:mt-6`}
+            className={`bg-[#0079b6] text-base sm:text-xl md:text-lg lg:text-xl w-min ${saira.className} h-auto p-1 px-3 sm:p-2 sm:px-4 font-light mt-2 sm:mt-6`}
             href="/contact"
           >
             PEDIR ORÇAMENTO

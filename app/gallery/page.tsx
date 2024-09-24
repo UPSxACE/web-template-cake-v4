@@ -16,7 +16,7 @@ export default function GalleryPage() {
         <article className="py-4 pb-16 w-full flex flex-col items-center gap-4 px-8 sm:px-12">
           <div className="w-full max-w-screen-xl">
             <h1
-              className={`text-5xl sm:text-6xl text-center ${leckerli.className}`}
+              className={`text-5xl sm:text-6xl text-center ${leckerli.className} text-[#0079b6]`}
             >
               As nossas criações
             </h1>
@@ -24,7 +24,7 @@ export default function GalleryPage() {
           <Pictures />
           <Button asChild>
             <Link
-              className={`text-base sm:text-xl md:text-lg lg:text-xl w-min ${saira.className} h-auto p-1 px-3 sm:p-2 sm:px-4 font-light mt-2 sm:mt-4`}
+              className={`bg-[#0079b6] text-base sm:text-xl md:text-lg lg:text-xl w-min ${saira.className} h-auto p-1 px-3 sm:p-2 sm:px-4 font-light mt-2 sm:mt-4`}
               href="/contact"
             >
               PEDIR ORÇAMENTO

@@ -14,7 +14,7 @@ export default function Gallery() {
         >
           <div className="flex flex-col gap-8">
             <h1
-              className={`text-6xl max-sm:text-4xl text-[#381C0F] text-center font-semibold ${lobster.className}`}
+              className={`text-6xl max-sm:text-4xl text-[#0079b6] text-center font-semibold ${lobster.className}`}
             >
               Infinitas Opções
             </h1>
