@@ -22,7 +22,7 @@ export default function Header({ activeTab }: { activeTab: string }) {
         <div className="flex w-full items-center bg-transparent max-sm:bg-white max-sm:absolute max-sm:top-0 max-sm:left-0 max-sm:px-6 max-sm:shadow-sm max-sm:min-h-14">
           <Link
             href="/"
-            className={`h-auto sm:h-12 bg-white rounded-3xl flex items-center p-2 text-lg justify-center text-theme-grey5 ${lobster.className}`}
+            className={`h-auto sm:h-12 bg-white rounded-3xl flex items-center p-2 text-lg justify-center text-[#0079b6] ${lobster.className}`}
           >
             <Image
               src="/logo.svg"

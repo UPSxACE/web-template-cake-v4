@@ -44,14 +44,10 @@ export default function Cta() {
             duration: 0.5,
             delay: 0.2 + 0.25 + 0.25 + 0.25,
           }}
+          className={`bg-[#0079b6] text-base sm:text-xl md:text-lg lg:text-xl w-min ${saira.className} h-auto p-1 px-3 sm:p-2 sm:px-4 font-light mt-2 sm:mt-6`}
           asChild
         >
-          <Link
-            className={`bg-[#0079b6] text-base sm:text-xl md:text-lg lg:text-xl w-min ${saira.className} h-auto p-1 px-3 sm:p-2 sm:px-4 font-light mt-2 sm:mt-6`}
-            href="/contact"
-          >
-            PEDIR ORÇAMENTO
-          </Link>
+          <Link href="/contact">PEDIR ORÇAMENTO</Link>
         </MotionButton>
       </div>
       <div className="hidden ml-auto h-full md:flex flex-col justify-center items-end relative md:w-6/12 lg:w-5/12">
