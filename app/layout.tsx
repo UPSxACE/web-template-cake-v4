@@ -19,6 +19,17 @@ export const metadata: Metadata = {
   title: "Feito com Amor",
   description:
     "Os melhores bolos de aniversário, cupcakes, tartes, semifrios, e muito mais...",
+  openGraph: {
+    images: [
+      {
+        url: "http://feitocomamor.pt/preview.png",
+        secureUrl: "https://feitocomamor.pt/preview.png",
+        width: 1898,
+        height: 916,
+        alt: "Preview image",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
