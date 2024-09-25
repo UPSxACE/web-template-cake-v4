@@ -130,7 +130,7 @@ export default function Footer() {
               Vyzion.pt
             </Link>{" "}
             <Link
-              href="/"
+              href="https://vyzion.pt"
               className="flex items-start  relative h-[18px] aspect-[151/119] mx-1"
             >
               <Image

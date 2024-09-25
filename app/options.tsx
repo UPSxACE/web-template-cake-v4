@@ -110,14 +110,14 @@ const data = [
   {
     imageSrc: "/cakes/cake2.jpeg",
     title: "Bolo de Aniversário",
-    price: 55.1,
+    price: 55,
     description:
       "Massa de noz com recheio de caramelo salgado e massa de Pão de ló com recheio de crocante de chocolate branco.\nCobertura de buttercream",
   },
   {
     imageSrc: "/cakes/cake3.jpeg",
     title: "Bolo de Aniversário",
-    price: 50.01,
+    price: 50,
     description:
       "Massa de framboesa com recheio de frutos silvestres.\nCobertura de buttercream.",
   },
