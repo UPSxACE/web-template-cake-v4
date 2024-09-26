@@ -8,7 +8,6 @@ export default async function contact(
 ): Promise<number | null | boolean> {
   let error: number | null = null;
 
-  return 500; //FIXME
   await api
     .post("api/mensagens", {
       data: {
