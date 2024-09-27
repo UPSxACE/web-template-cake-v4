@@ -11,6 +11,7 @@ export default function Shapes({
   return (
     <>
       <Image
+        decoding="sync"
         className={twMerge(
           "absolute top-0 right-0 pointer-events-none select-none -z-10 fill-red-500",
           classNameTop
@@ -21,6 +22,7 @@ export default function Shapes({
         height={616 / 2}
       />
       <Image
+        decoding="sync"
         className={twMerge(
           "absolute bottom-0 left-0 pointer-events-none select-none -z-10",
           classNameBottom
