@@ -62,6 +62,7 @@ export default function Cta() {
           className="aspect-[924/1202] relative w-[80%] mr-auto ml-auto"
         >
           <Image
+            decoding="sync"
             className="p-[8%]"
             src="/cake14.png"
             alt="delicious cake"

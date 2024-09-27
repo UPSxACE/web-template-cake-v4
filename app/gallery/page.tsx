@@ -5,8 +5,10 @@ import Link from "next/link";
 import leckerli from "../fonts/leckerli";
 import saira from "../fonts/saira";
 import Pictures from "./pictures";
+import fetchPictures from "@/actions/fetch-pictures";
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const firstPictures = await fetchPictures({ pageParam: 1 });
   return (
     <main
       className={`min-h-[calc(100svh_+_1rem)] bg-full -z-20 relative flex flex-col text-theme-grey-5 ${saira.className}`}
@@ -21,7 +23,7 @@ export default function GalleryPage() {
               As nossas criações
             </h1>
           </div>
-          <Pictures />
+          <Pictures firstPictures={firstPictures} />
           <Button
             className={`bg-[#0079b6] text-base sm:text-xl md:text-lg lg:text-xl w-min ${saira.className} h-auto p-1 px-3 sm:p-2 sm:px-4 font-light mt-2 sm:mt-4`}
             asChild

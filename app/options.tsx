@@ -15,7 +15,14 @@ import leckerli from "./fonts/leckerli";
 import lobster from "./fonts/lobster";
 import saira from "./fonts/saira";
 
-export default function Options() {
+export type PriceData = {
+  imageSrc: string;
+  title: string;
+  price: number;
+  description: string;
+};
+
+export default function Options({ pricesData }: { pricesData: PriceData[] }) {
   const state = useCarouselState();
 
   return (
@@ -46,7 +53,7 @@ export default function Options() {
               opts={{ align: "start" }}
             >
               <CarouselContent className="flex gap-6">
-                {data.map((x, index) => (
+                {pricesData.map((x, index) => (
                   <CarouselItem
                     key={index}
                     className="basis-full sm:basis-[calc(50%-0.75rem)] lg:basis-[calc(33.333333%-1rem)]"
@@ -99,47 +106,3 @@ function formatEuro(money: number) {
   return firstPart + secondPart.padEnd(3, "0");
 }
 
-const data = [
-  {
-    imageSrc: "/cakes/cake1.jpeg",
-    title: "Bolo de Aniversário",
-    price: 65,
-    description:
-      "Massa de noz com recheio de limão e caramelo salgado.\nCobertura de buttercream.",
-  },
-  {
-    imageSrc: "/cakes/cake2.jpeg",
-    title: "Bolo de Aniversário",
-    price: 55,
-    description:
-      "Massa de noz com recheio de caramelo salgado e massa de Pão de ló com recheio de crocante de chocolate branco.\nCobertura de buttercream",
-  },
-  {
-    imageSrc: "/cakes/cake3.jpeg",
-    title: "Bolo de Aniversário",
-    price: 50,
-    description:
-      "Massa de framboesa com recheio de frutos silvestres.\nCobertura de buttercream.",
-  },
-  {
-    imageSrc: "/cakes/cake4.jpeg",
-    title: "Bolo de Aniversário",
-    price: 45,
-    description:
-      "Massa de cenoura com recheio de creme de avelã.\nCobertura de chantilly.",
-  },
-  {
-    imageSrc: "/cakes/cake5.jpeg",
-    title: "Bolo de Aniversário",
-    price: 45,
-    description:
-      "Massa de laranja com recheio de morango.\nCobertura de chantilly.",
-  },
-  {
-    imageSrc: "/cakes/cake6.jpeg",
-    title: "Bolo de Aniversário",
-    price: 50,
-    description:
-      "Massa de chocolate com recheio de maracujá.\nCobertura de buttercream.",
-  },
-];

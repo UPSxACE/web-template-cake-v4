@@ -1,3 +1,5 @@
+import fetchLastPictures from "@/actions/fetch-last-pictures";
+import fetchPrices from "@/actions/fetch-prices";
 import Footer from "@/components/ui/layout/footer";
 import Header from "@/components/ui/layout/header";
 import Cta from "./cta";
@@ -7,12 +9,9 @@ import Options from "./options";
 import Shapes from "./shapes";
 import Specialties from "./specialties";
 
-export default function Home() {
-  // try: -shapes
-  //      -pink shapes
-  //      -no shapes + pink gradient
-  //      -no shapes + details on cake
-  //      -details on cta text?
+export default async function Home() {
+  const pricesData = await fetchPrices();
+  const lastPictures = await fetchLastPictures();
 
   return (
     <main className="min-h-[calc(100svh_-_1rem)] relative flex flex-col text-theme-grey-5 -z-20">
@@ -28,9 +27,9 @@ export default function Home() {
       </section>
 
       <Specialties />
-      <Gallery />
+      <Gallery lastPictures={lastPictures} />
       <More />
-      <Options />
+      <Options pricesData={pricesData} />
 
       <Footer />
     </main>

@@ -2,7 +2,7 @@ import Link from "next/link";
 import lobster from "./fonts/lobster";
 import saira from "./fonts/saira";
 
-export default function Gallery() {
+export default function Gallery({ lastPictures }: { lastPictures: string[] }) {
   return (
     <section
       id="gallery"
@@ -26,7 +26,7 @@ export default function Gallery() {
           <div className="flex justify-center mt-3">
             <div className="w-full max-w-6xl">
               <div className="flex gap-4 flex-wrap">
-                {data.slice(0, 8).map((x, index) => (
+                {lastPictures.map((x, index) => (
                   <div
                     key={index}
                     className="basis-full sm:basis-[calc(50%-0.50rem)] md:basis-[calc(25%-0.75rem)]"
@@ -35,7 +35,7 @@ export default function Gallery() {
                       <Link
                         href="/contact"
                         style={{
-                          backgroundImage: `url(${x.imageSrc})`,
+                          backgroundImage: `url(${x})`,
                           backgroundSize: "cover",
                         }}
                         className="w-full aspect-square bg-gray-300 rounded-none relative"
@@ -62,61 +62,3 @@ export default function Gallery() {
   );
 }
 
-const data = [
-  {
-    imageSrc: "/gallery/1.jpg",
-    title: "Bolo de Aniversário",
-    price: 65,
-    description:
-      "Massa de noz com recheio de limão e caramelo salgado.\nCobertura de buttercream.",
-  },
-  {
-    imageSrc: "/gallery/2.jpg",
-    title: "Bolo de Aniversário",
-    price: 55.1,
-    description:
-      "Massa de noz com recheio de caramelo salgado e massa de Pão de ló com recheio de crocante de chocolate branco.\nCobertura de buttercream",
-  },
-  {
-    imageSrc: "/gallery/3.jpg",
-    title: "Bolo de Aniversário",
-    price: 50.01,
-    description:
-      "Massa de framboesa com recheio de frutos silvestres.\nCobertura de buttercream.",
-  },
-  {
-    imageSrc: "/gallery/4.jpg",
-    title: "Bolo de Aniversário",
-    price: 45,
-    description:
-      "Massa de cenoura com recheio de creme de avelã.\nCobertura de chantilly.",
-  },
-  {
-    imageSrc: "/gallery/5.jpg",
-    title: "Bolo de Aniversário",
-    price: 45,
-    description:
-      "Massa de laranja com recheio de morango.\nCobertura de chantilly.",
-  },
-  {
-    imageSrc: "/gallery/6.jpg",
-    title: "Bolo de Aniversário",
-    price: 50,
-    description:
-      "Massa de chocolate com recheio de maracujá.\nCobertura de buttercream.",
-  },
-  {
-    imageSrc: "/gallery/7.jpg",
-    title: "Bolo de Aniversário",
-    price: 65,
-    description:
-      "Massa de noz com recheio de limão e caramelo salgado.\nCobertura de buttercream.",
-  },
-  {
-    imageSrc: "/gallery/8.jpg",
-    title: "Bolo de Aniversário",
-    price: 55.1,
-    description:
-      "Massa de noz com recheio de caramelo salgado e massa de Pão de ló com recheio de crocante de chocolate branco.\nCobertura de buttercream",
-  },
-];

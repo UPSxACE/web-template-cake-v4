@@ -1,19 +1,9 @@
 import { Toaster } from "@/components/sui/sonner";
 import JumpBackButton from "@/components/ui/layout/jump-back-button";
 import type { Metadata } from "next";
-// import localFont from "next/font/local";
 import "./globals.css";
-
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
+import QueryProvider from "./query-provider";
+// import localFont from "next/font/local";
 
 export const metadata: Metadata = {
   title: "Feito com Amor",
@@ -41,9 +31,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`antialiased -z-20 relative`}>
-        {children}
-        <JumpBackButton />
-        <Toaster richColors />
+        <QueryProvider>
+          {children}
+          <JumpBackButton />
+          <Toaster richColors />
+        </QueryProvider>
       </body>
     </html>
   );

@@ -1,30 +1,85 @@
 "use client";
 
+import fetchPictures from "@/actions/fetch-pictures";
 import LoadingSpinner from "@/components/ui/loading-spinner";
+import {
+  QueryFunction,
+  QueryKey,
+  useInfiniteQuery,
+} from "@tanstack/react-query";
 import { useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
-export default function Pictures() {
-  const [max, setMax] = useState(8);
-  const hasNextPage = max < pictures.length;
+type Pagination = {
+  page: number;
+  pageSize: number;
+  pageCount: number;
+  total: number;
+};
+
+export default function Pictures({
+  firstPictures,
+}: {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  firstPictures: any;
+}) {
   const ref = useRef(null);
   const inView = useInView(ref);
 
-  useEffect(() => {
-    if (inView && hasNextPage) {
-      const timeout = setTimeout(() => setMax(max + 8), 200);
-      return () => clearTimeout(timeout);
-    }
-  }, [inView, hasNextPage]);
+  const _fetchPictures: QueryFunction<
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any,
+    QueryKey,
+    number
+  > = async ({ pageParam }) => {
+    const data = await fetchPictures({ pageParam });
+    return data;
+  };
 
-  console.log(inView);
+  const getInitialPageParam = () => {
+    const pagination: Pagination = firstPictures.meta.pagination;
+    return pagination.page < pagination.pageCount ? pagination.page + 1 : null;
+  };
+
+  const {
+    data,
+    fetchNextPage,
+    hasNextPage,
+    isFetching,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } = useInfiniteQuery<any, any, any, any, any>({
+    queryKey: ["pictures"],
+    queryFn: _fetchPictures,
+    initialPageParam: getInitialPageParam(),
+    getNextPageParam: (lastPage) => {
+      const pagination: Pagination = lastPage.meta.pagination;
+      return pagination.page < pagination.pageCount
+        ? pagination.page + 1
+        : null;
+    },
+  });
+
+  useEffect(() => {
+    console.log(inView, hasNextPage, isFetching);
+    if (inView && hasNextPage && !isFetching) {
+      fetchNextPage();
+    }
+  }, [inView, hasNextPage, fetchNextPage, isFetching]);
+
+  const pictures: string[] = (data?.pages || []).reduce(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (acc: string[], curr: any) => [...acc, ...curr.data],
+    firstPictures.data
+  );
+
   return (
     <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-screen-xl mt-4">
-      {pictures.slice(0, max).map((x, i) => (
+      {pictures.map((x, i) => (
         <div key={i} className="aspect-square w-full relative">
           <Image
+            decoding="sync"
             src={x}
             className="bg-gray-300"
             fill
@@ -38,7 +93,7 @@ export default function Pictures() {
           </Link>
         </div>
       ))}
-      {hasNextPage && (
+      {((data?.pages || []).length === 0 || hasNextPage) && (
         <div
           ref={ref}
           className="flex justify-center col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4"
@@ -50,29 +105,3 @@ export default function Pictures() {
   );
 }
 
-const pictures = [
-  "/gallery/1.jpg",
-  "/gallery/2.jpg",
-  "/gallery/3.jpg",
-  "/gallery/4.jpg",
-  "/gallery/5.jpg",
-  "/gallery/6.jpg",
-  "/gallery/7.jpg",
-  "/gallery/8.jpg",
-  "/gallery/Pic(1).jpg",
-  "/gallery/Pic(2).jpg",
-  "/gallery/Pic(3).jpg",
-  "/gallery/Pic(4).jpg",
-  "/gallery/Pic(5).jpg",
-  "/gallery/Pic(6).jpg",
-  "/gallery/Pic(7).jpg",
-  "/gallery/Pic(8).jpg",
-  "/gallery/Pic(9).jpg",
-  "/gallery/Pic(10).jpg",
-  "/gallery/Pic(11).jpg",
-  "/gallery/Pic(12).jpg",
-  "/gallery/Pic(13).jpg",
-  "/gallery/Pic(14).jpg",
-  "/gallery/Pic(15).jpg",
-  "/gallery/Pic(16).jpg",
-];
