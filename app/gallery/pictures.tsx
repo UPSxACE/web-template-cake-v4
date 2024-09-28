@@ -83,8 +83,7 @@ export default function Pictures({
             className="bg-gray-300"
             fill
             alt="bolo feito com amor"
-            sizes="(max-width: 640px) 90vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            quality={100}
+            sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, (max-width: 1280px) 50vw, 33vw"
           />
           <Link
             href="/contact"
