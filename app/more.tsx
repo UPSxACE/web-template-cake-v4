@@ -47,7 +47,7 @@ export default function More() {
               celebrações ainda mais especiais!
             </p>
             <Link
-              className="mt-5 max-sm:mt-4 text-xl max-sm:text-base text-white text-center font-medium hover:bg-white hover:text-black border border-solid border-white hover:border-theme-grey5 w-fit p-2 px-4 rounded-3xl ml-auto mr-auto"
+              className="mt-5 max-sm:mt-4 text-xl max-sm:text-base text-white text-center font-medium hover:bg-[#40775d] border border-solid border-white hover:border-[#40775d] w-fit p-2 px-4 rounded-3xl ml-auto mr-auto"
               href="/contact"
             >
               SABER MAIS

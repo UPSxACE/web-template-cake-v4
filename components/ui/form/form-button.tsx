@@ -8,7 +8,10 @@ const FormButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, ...props }, ref) => {
     return (
       <Button
-        className={twMerge("w-full rounded-3xl bg-theme-brown", className)}
+        className={twMerge(
+          "w-full rounded-3xl bg-theme-brown hover:bg-black",
+          className
+        )}
         ref={ref}
         {...props}
       />
@@ -19,3 +22,4 @@ const FormButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
 FormButton.displayName = "FormButton";
 
 export { FormButton };
+

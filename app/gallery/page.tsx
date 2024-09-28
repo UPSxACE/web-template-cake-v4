@@ -25,7 +25,7 @@ export default async function GalleryPage() {
           </div>
           <Pictures firstPictures={firstPictures} />
           <Button
-            className={`bg-[#0079b6] text-base sm:text-xl md:text-lg lg:text-xl w-min ${saira.className} h-auto p-1 px-3 sm:p-2 sm:px-4 font-light mt-2 sm:mt-4`}
+            className={`bg-[#0079b6] hover:bg-[#036090] text-base sm:text-xl md:text-lg lg:text-xl w-min ${saira.className} h-auto p-1 px-3 sm:p-2 sm:px-4 font-light mt-2 sm:mt-4`}
             asChild
           >
             <Link href="/contact">PEDIR ORÇAMENTO</Link>

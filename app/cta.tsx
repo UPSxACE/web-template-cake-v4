@@ -44,7 +44,7 @@ export default function Cta() {
             duration: 0.5,
             delay: 0.2 + 0.25 + 0.25 + 0.25,
           }}
-          className={`bg-[#0079b6] text-base sm:text-xl md:text-lg lg:text-xl w-min ${saira.className} h-auto p-1 px-3 sm:p-2 sm:px-4 font-light mt-2 sm:mt-6`}
+          className={`bg-[#0079b6] hover:bg-[#036090] text-base sm:text-xl md:text-lg lg:text-xl w-min ${saira.className} h-auto p-1 px-3 sm:p-2 sm:px-4 font-light mt-2 sm:mt-6`}
           asChild
         >
           <Link href="/contact">PEDIR ORÇAMENTO</Link>
