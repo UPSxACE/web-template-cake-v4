@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import lobster from "./fonts/lobster";
 import saira from "./fonts/saira";
@@ -34,12 +35,16 @@ export default function Gallery({ lastPictures }: { lastPictures: string[] }) {
                     <article className="flex flex-col w-full gap-1">
                       <Link
                         href="/contact"
-                        style={{
-                          backgroundImage: `url(${x})`,
-                          backgroundSize: "cover",
-                        }}
                         className="w-full aspect-square bg-gray-300 rounded-none relative"
                       >
+                        <Image
+                          src={x}
+                          fill
+                          alt="uma de nossas criações"
+                          className="object-cover"
+                          sizes="(max-width: 768px) 90vw, 25vw"
+                          quality={75}
+                        />
                         <div className="absolute opacity-0 hover:opacity-80 bg-[#262321] w-full h-full transition-all duration-300 text-white flex justify-center items-center text-lg select-none">
                           Encomende Já
                         </div>
@@ -61,4 +66,3 @@ export default function Gallery({ lastPictures }: { lastPictures: string[] }) {
     </section>
   );
 }
-

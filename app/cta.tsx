@@ -62,11 +62,13 @@ export default function Cta() {
           className="aspect-[924/1202] relative w-[80%] mr-auto ml-auto"
         >
           <Image
+            priority
             decoding="sync"
             className="p-[8%]"
             src="/cake14.png"
             alt="delicious cake"
             fill
+            sizes="(max-width: 768px) 33vw, (max-width: 1024px) 50vw, (max-width: 1280px) 50vw, 33vw"
           />
         </motion.div>
       </div>

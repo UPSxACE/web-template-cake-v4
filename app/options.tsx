@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/layout/carousel-buttons";
 import useCarouselState from "@/components/ui/layout/use-carousel-state";
 import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
 import Link from "next/link";
 import leckerli from "./fonts/leckerli";
 import lobster from "./fonts/lobster";
@@ -61,12 +62,16 @@ export default function Options({ pricesData }: { pricesData: PriceData[] }) {
                     <article className="flex flex-col w-full px-4 gap-1">
                       <Link
                         href="/contact"
-                        style={{
-                          backgroundImage: `url(${x.imageSrc})`,
-                          backgroundSize: "cover",
-                        }}
-                        className="w-full aspect-square bg-gray-300 rounded-3xl"
-                      ></Link>
+                        className="w-full aspect-square bg-gray-300 rounded-3xl relative overflow-hidden"
+                      >
+                        <Image
+                          src={x.imageSrc}
+                          fill
+                          alt="uma de nossas criações"
+                          className="object-cover"
+                          sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 33vw"
+                        />
+                      </Link>
                       <Link
                         href="/contact"
                         className={`text-center text-xl font-medium ${leckerli.className} mt-2 text-[#58a17e]`}

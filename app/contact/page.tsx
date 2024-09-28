@@ -40,6 +40,8 @@ export default function ContactPage() {
               <div className="w-full flex flex-col gap-6 justify-center items-center px-8 max-md:px-6 max-md:max-w-[36rem]">
                 <div className="aspect-[292/250] w-full max-md:max-w-[16rem] relative">
                   <Image
+                    priority
+                    decoding="sync"
                     className="pointer-events-none select-none"
                     src="/contact/slice-brown.svg"
                     alt="cake slice draw"

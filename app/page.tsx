@@ -9,6 +9,7 @@ import Options from "./options";
 import Shapes from "./shapes";
 import Specialties from "./specialties";
 
+
 export default async function Home() {
   const pricesData = await fetchPrices();
   const lastPictures = await fetchLastPictures();
