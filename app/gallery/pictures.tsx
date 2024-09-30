@@ -81,7 +81,7 @@ export default function Pictures({
           <Image
             decoding="sync"
             src={x}
-            className="bg-gray-300"
+            className="bg-gray-300 object-cover"
             fill
             alt="bolo feito com amor"
             sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, (max-width: 1280px) 50vw, 33vw"
