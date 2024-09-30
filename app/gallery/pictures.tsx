@@ -20,10 +20,11 @@ type Pagination = {
 };
 
 export default function Pictures({
-  firstPictures,
+  firstPictures,morePictures
 }: {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  firstPictures: any;
+  firstPictures: any,
+  morePictures: boolean
 }) {
   const ref = useRef(null);
   const inView = useInView(ref);
@@ -74,7 +75,7 @@ export default function Pictures({
   );
 
   return (
-    <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-screen-xl mt-4 justify-center">
+    <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-screen-xl mt-4">
       {pictures.map((x, i) => (
         <div key={i} className="aspect-square w-full relative">
           <Image
@@ -93,7 +94,7 @@ export default function Pictures({
           </Link>
         </div>
       ))}
-      {((data?.pages || []).length === 0 || hasNextPage) && (
+      {morePictures && ((data?.pages || []).length === 0 || hasNextPage) && (
         <div
           ref={ref}
           className="flex justify-center col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4"

@@ -9,7 +9,9 @@ export default async function fetchPrices(): Promise<PriceData[]> {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       return data.map((x: any) => {
         const url =
-          x?.imagem?.formats?.medium?.url || x?.imagem?.formats?.small?.url;
+          x?.imagem?.formats?.medium?.url ||
+          x?.imagem?.formats?.small?.url ||
+          x?.imagem?.Imagem?.formats?.thumbnail?.url;
 
         return {
           imageSrc: url ? process.env.API_URL + url : "/",

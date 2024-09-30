@@ -16,7 +16,8 @@ export default async function fetchPictures({
         (imageObj: any) => {
           const url =
             imageObj?.Imagem?.formats?.medium?.url ||
-            imageObj?.Imagem?.formats?.small?.url;
+            imageObj?.Imagem?.formats?.small?.url ||
+            imageObj?.Imagem?.formats?.thumbnail?.url;
 
           return url ? process.env.API_URL + url : "/";
         }

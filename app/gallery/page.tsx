@@ -1,3 +1,4 @@
+import fetchPictures from "@/actions/fetch-pictures";
 import { Button } from "@/components/ui/layout/button";
 import Footer from "@/components/ui/layout/footer";
 import Header from "@/components/ui/layout/header";
@@ -5,12 +6,13 @@ import Link from "next/link";
 import leckerli from "../fonts/leckerli";
 import saira from "../fonts/saira";
 import Pictures from "./pictures";
-import fetchPictures from "@/actions/fetch-pictures";
 
 export const revalidate = 60;
 
 export default async function GalleryPage() {
   const firstPictures = await fetchPictures({ pageParam: 1 });
+  const pagination = firstPictures.meta.pagination;
+  const morePictures = pagination.page < pagination.pageCount ? true : false;
   return (
     <main
       className={`min-h-[calc(100svh_+_1rem)] bg-full -z-20 relative flex flex-col text-theme-grey-5 ${saira.className}`}
@@ -25,7 +27,7 @@ export default async function GalleryPage() {
               As nossas criações
             </h1>
           </div>
-          <Pictures firstPictures={firstPictures} />
+          <Pictures firstPictures={firstPictures} morePictures={morePictures} />
           <Button
             className={`bg-[#0079b6] hover:bg-[#036090] text-base sm:text-xl md:text-lg lg:text-xl w-min ${saira.className} h-auto p-1 px-3 sm:p-2 sm:px-4 font-light mt-2 sm:mt-4`}
             asChild

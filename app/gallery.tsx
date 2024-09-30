@@ -26,7 +26,7 @@ export default function Gallery({ lastPictures }: { lastPictures: string[] }) {
           </div>
           <div className="flex justify-center mt-3">
             <div className="w-full max-w-6xl">
-              <div className="flex gap-4 flex-wrap">
+              <div className="flex gap-4 flex-wrap justify-center">
                 {lastPictures.map((x, index) => (
                   <div
                     key={index}
