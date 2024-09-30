@@ -8,7 +8,7 @@ export default async function fetchPictures({
 }) {
   return await api
     .get(
-      `api/galerias?pagination[page]=${pageParam}&pagination[pageSize]=8&populate=*`
+      `api/galerias?pagination[page]=${pageParam}&pagination[pageSize]=8&populate=*&sort=createdAt:desc`
     )
     .then(({ data }) => {
       data.data = data.data.map(
