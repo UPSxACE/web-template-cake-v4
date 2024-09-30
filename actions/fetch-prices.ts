@@ -11,7 +11,7 @@ export default async function fetchPrices(): Promise<PriceData[]> {
         const url =
           x?.imagem?.formats?.medium?.url ||
           x?.imagem?.formats?.small?.url ||
-          x?.imagem?.Imagem?.formats?.thumbnail?.url;
+          x?.imagem?.formats?.thumbnail?.url;
 
         return {
           imageSrc: url ? process.env.API_URL + url : "/",
