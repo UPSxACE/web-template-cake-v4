@@ -79,6 +79,7 @@ export default function Pictures({
       {pictures.map((x, i) => (
         <div key={i} className="aspect-square w-full relative">
           <Image
+            priority
             decoding="sync"
             src={x}
             className="bg-gray-300 object-cover"
