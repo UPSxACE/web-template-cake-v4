@@ -7,6 +7,8 @@ import saira from "../fonts/saira";
 import Pictures from "./pictures";
 import fetchPictures from "@/actions/fetch-pictures";
 
+export const revalidate = 60;
+
 export default async function GalleryPage() {
   const firstPictures = await fetchPictures({ pageParam: 1 });
   return (
