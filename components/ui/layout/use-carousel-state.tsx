@@ -1,6 +1,6 @@
 "use client";
 import { CarouselApi } from "@/components/sui/carousel";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export default function useCarouselState() {
   const [api, setApi] = useState<CarouselApi>();
@@ -10,10 +10,10 @@ export default function useCarouselState() {
   const [canScrollNext, setCanScrollNext] = useState<boolean>(
     Boolean(api?.canScrollNext())
   );
-  const refreshButtons = () => {
+  const refreshButtons = useCallback(() => {
     setCanScrollPrev(Boolean(api?.canScrollPrev()));
     setCanScrollNext(Boolean(api?.canScrollNext()));
-  };
+  }, [api]);
 
   useEffect(() => {
     refreshButtons();
